@@ -15,9 +15,17 @@
         <h2>EE476: Introduction to VLSI Systems</h2>
         <p>Fall 2025</p>
       </div>
+
+      <!-- Logo aligned right -->
+      <div class="logo">
+        <img src="uet.png" alt="Course Logo">
+      </div>
      
     </div>
 
+    <!-- Hamburger icon (mobile only) -->
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -72,9 +80,15 @@
   <footer>
     <p>&copy; 2025 UET</p>
   </footer>
-
+<!-- JavaScript for menu toggle -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav ul').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
+
 
 
 
