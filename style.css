@@ -214,7 +214,8 @@ nav ul {
     margin-bottom: 4px;
     color: #444;
   }
-  
+}
+
 main p {
   text-align: justify;
 }
@@ -223,6 +224,7 @@ main p {
   color: red;
   font-weight: bold; /* optional */
 }
-}
+
+
 
 
