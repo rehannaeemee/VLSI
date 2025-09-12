@@ -10,6 +10,7 @@ body {
   box-sizing: inherit;
 }
 
+/* ----- HEADER ----- */
 header {
   background: #f8f8f8;
   padding: 20px;
@@ -42,6 +43,7 @@ header p {
   margin: 5px 0 20px;
 }
 
+/* Logo top-right */
 .logo {
   position: absolute;
   top: 20px;
@@ -55,6 +57,7 @@ header p {
   display: block;
 }
 
+/* ----- NAVIGATION ----- */
 nav ul {
   list-style: none;
   padding: 0;
@@ -73,7 +76,8 @@ nav a {
   color: #333;
 }
 
-nav a.active, nav a:hover {
+nav a.active,
+nav a:hover {
   font-weight: bold;
 }
 
@@ -90,6 +94,7 @@ nav a.active, nav a:hover {
   z-index: 1001;
 }
 
+/* ----- MAIN CONTENT ----- */
 main {
   padding: 20px;
   max-width: 900px;
@@ -121,6 +126,7 @@ table tbody td {
   word-wrap: break-word;
 }
 
+/* ----- FOOTER ----- */
 footer {
   text-align: center;
   padding: 20px;
@@ -135,7 +141,7 @@ footer {
     display: block;
   }
 
- /* Hide nav by default on mobile */
+  /* Hide nav by default on mobile */
 nav ul {
   display: none;
   flex-direction: column;
@@ -208,7 +214,7 @@ nav ul {
     margin-bottom: 4px;
     color: #444;
   }
-
+  
 main p {
   text-align: justify;
 }
@@ -217,4 +223,5 @@ main p {
   color: red;
   font-weight: bold; /* optional */
 }
+
 
