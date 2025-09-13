@@ -225,6 +225,16 @@ main p {
   font-weight: bold; /* optional */
 }
 
+footer.credits {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+}
+
+
 
 
 
