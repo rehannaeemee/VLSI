@@ -10,38 +10,7 @@
 </head>
 <body>
 
-  <header>
-   <div class="header-container">
-      <div class="title-block">
-        <h1>University of Engineering and Technology Lahore</h1>
-        <h2>Department of Electrical Engineering</h2>
-        <h3>EE476: Introduction to VLSI Systems</h3>
-        <p>Fall 2025</p>
-      </div>
-
-      <!-- Logo aligned right -->
-      <div class="logo">
-        <img src="uet.png" alt="Course Logo">
-      </div>
-     
-    </div>
-
-    <!-- Hamburger icon (mobile only) -->
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active" >Home</a></li>
-        <li><a href="policy.html">Policy</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="https://uetpk-my.sharepoint.com/:f:/g/personal/rehan_naeem_uet_edu_pk/EtXjc_S-HY9MhnlI8R3txj0BgQCOxjhreYGG_iZVpxhoFQ?e=Wm758s">Course Materials</a></li>
-        <li><a href="https://uetpk-my.sharepoint.com/:b:/g/personal/rehan_naeem_uet_edu_pk/EekaE3HvzM1FkH578DHdCrsBym8pj3ZPXAlcUrbtBkFTiQ?e=QpY5uJ">Complex Engineering Problem</a></li>
-        <li><a href="announcement.html">Announcements</a></li>
-        <li><a href="https://uetpk-my.sharepoint.com/:x:/g/personal/rehan_naeem_uet_edu_pk/EVfvHqoCVftItioekRQmOL4B9abOfM5zUDgGThNRLjWaIQ?e=KIQdkS">Results</a></li>
-
-      </ul>
-    </nav>
-  </header>
+  <div id="header"></div>
 
   <main>
     <h2>Welcome to EE476: Introduction to VLSI Systems</h2>
@@ -79,20 +48,23 @@ Students explore device‑, circuit‑, and system‑level trade‑offs through 
     </div>
   </main>
 
-  <footer class="credits">
-  <p>© 2025 Course Website | Designed by Rehan Naeem</p>
-  </footer>
-
-
-  <!-- JavaScript for menu toggle -->
+  <div id="footer"></div>
+  
   <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      document.querySelector('nav ul').classList.toggle('show');
-    });
+    // load header & footer
+    async function loadPart(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPart("header", "header.html");
+    loadPart("footer", "footer.html");
   </script>
+
+  <script src="menu-toggle.js"></script>
   
 </body>
 </html>
+
 
 
 
