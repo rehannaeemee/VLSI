@@ -50,20 +50,11 @@ Students explore device‑, circuit‑, and system‑level trade‑offs through 
 
   <div id="footer"></div>
   
-  <script>
-    // load header & footer
-    async function loadPart(id, file) {
-      const res = await fetch(file);
-      document.getElementById(id).innerHTML = await res.text();
-    }
-    loadPart("header", "header.html");
-    loadPart("footer", "footer.html");
-  </script>
-
-  <script src="menu-toggle.js"></script>
+  <script src="loader.js"></script>
   
 </body>
 </html>
+
 
 
 
