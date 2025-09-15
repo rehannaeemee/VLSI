@@ -4,8 +4,13 @@ fetch("header.html")
   .then(data => {
     document.getElementById("header").innerHTML = data;
 
+    // ✅ Fix: handle index.html default case
+    let currentPage = window.location.pathname.split("/").pop();
+    if (currentPage === "") {
+      currentPage = "index.html";
+    }
+
     // Highlight active nav link
-    const currentPage = window.location.pathname.split("/").pop();
     document.querySelectorAll("nav ul li a").forEach(link => {
       if (link.getAttribute("href") === currentPage) {
         link.classList.add("active");
